@@ -1,0 +1,26 @@
+resources:
+  jobs:
+    medallion_architecture:
+      name: medallion_architecture
+      tasks:
+        - task_key: bronze_layer
+          notebook_task:
+            notebook_path: /Workspace/Users/roasfora@hotmail.com/pipeline_contoso/bronze_layer
+            source: WORKSPACE
+          existing_cluster_id: 0516-155831-kopmp4vx
+        - task_key: silve_layer
+          depends_on:
+            - task_key: bronze_layer
+          notebook_task:
+            notebook_path: /Workspace/Users/roasfora@hotmail.com/pipeline_contoso/silver_layer
+            source: WORKSPACE
+          existing_cluster_id: 0516-155831-kopmp4vx
+        - task_key: gold_layer
+          depends_on:
+            - task_key: silve_layer
+          notebook_task:
+            notebook_path: /Workspace/Users/roasfora@hotmail.com/pipeline_contoso/gold_layer
+            source: WORKSPACE
+          existing_cluster_id: 0516-155831-kopmp4vx
+      queue:
+        enabled: true
