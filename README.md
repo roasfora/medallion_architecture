@@ -2,7 +2,10 @@
 
 This project implements a full data pipeline using the **Medallion Architecture** (Bronze → Silver → Gold) with **Azure Blob Storage** as the source and **Delta Lake** as the storage format. The pipeline was built and orchestrated in **Databricks**.
 
-doc/architecture.png
+<p align="center">
+  <img src="doc/architecture.png" alt="Architecture Diagram" width="600"/>
+</p>
+
 
 ##  Project Structure
 
