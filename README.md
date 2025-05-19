@@ -67,6 +67,10 @@ medallion_architecture/
    - `gold_layer`
 5. Orchestrate with a **Databricks Job** or **Workflow**
 
+<p align="center">
+  <img src="doc/pipeline.png" alt="Pipeline Workflow" width="600"/>
+</p>
+
 ---
 
 ## 📌 Sample Outputs (Gold Layer)
